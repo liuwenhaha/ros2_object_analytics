@@ -33,13 +33,13 @@ def generate_launch_description():
             output='screen'),
 
         # api_composition
-        launch_ros.actions.Node(
-            package='composition', node_executable='api_composition', output='screen',
-            remappings=[('rgb/camera_info', '/camera/color/camera_info'),
-                        ('rgb/image_rect_color', '/camera/color/image_raw'),
-                        ('depth_registered/image_rect',
-                         '/camera/aligned_depth_to_color/image_raw'),
-                        ('points', '/camera/depth/color/points')]),
+        # launch_ros.actions.Node(
+        #     package='composition', node_executable='api_composition', output='screen',
+        #     remappings=[('rgb/camera_info', '/camera/color/camera_info'),
+        #                 ('rgb/image_rect_color', '/camera/color/image_raw'),
+        #                 ('depth_registered/image_rect',
+        #                  '/camera/aligned_depth_to_color/image_raw'),
+        #                 ('points', '/camera/depth/color/points')]),
 
         # depth_image_proc
         # TODO: enable depth_image_proc when ros2 image_pipeline is ready
